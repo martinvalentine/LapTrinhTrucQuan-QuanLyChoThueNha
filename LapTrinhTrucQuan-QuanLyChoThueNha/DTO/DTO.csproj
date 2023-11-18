@@ -223,7 +223,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CoquanDTO.cs" />
+    <Compile Include="DanhmucnhaDTO.cs" />
+    <Compile Include="DoituongSudungDTO.cs" />
+    <Compile Include="HinhthucThanhtoanDTO.cs" />
+    <Compile Include="KhachthueDTO.cs" />
+    <Compile Include="LoainhaDTO.cs" />
+    <Compile Include="MucdichSudungDTO.cs" />
+    <Compile Include="NghenghiepDTO.cs" />
+    <Compile Include="Nha_taisanDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaikhoanDTO.cs" />
+    <Compile Include="TaisanDTO.cs" />
+    <Compile Include="ThuenhaDTO.cs" />
+    <Compile Include="ThutiennhaDTO.cs" />
+    <Compile Include="TranhaDTO.cs" />
+    <Compile Include="TraNha_mattaisanDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
