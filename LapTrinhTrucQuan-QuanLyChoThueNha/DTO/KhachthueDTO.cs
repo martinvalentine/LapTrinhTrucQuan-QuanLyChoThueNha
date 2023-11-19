@@ -1,21 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace QLChoThueNha.DTO
+namespace DTO
 {
-    //
     public class KhachThueDTO
     {
         private string _maKhach;
         private string _tenKhach;
         private DateTime _ngaySinh;
-        private bool _gioiTinh;
+        private int _gioiTinh;
         private string _soCMND;
         private string _diaChiThuongTru;
         private string _maNghe;
         private string _maCQ;
 
-        public KhachThueDTO(string maKhach, string tenKhach, DateTime ngaySinh, bool gioiTinh,
+        public KhachThueDTO(string maKhach, string tenKhach, DateTime ngaySinh, int gioiTinh,
             string soCMND, string diaChiThuongTru, string maNghe, string maCQ)
         {
             this._maKhach = maKhach;
@@ -31,7 +34,7 @@ namespace QLChoThueNha.DTO
         public string MaKhach { get => _maKhach; set => _maKhach = value; }
         public string TenKhach { get => _tenKhach; set => _tenKhach = value; }
         public DateTime NgaySinh { get => _ngaySinh; set => _ngaySinh = value; }
-        public bool GioiTinh { get => _gioiTinh; set => _gioiTinh = value; }
+        public int GioiTinh { get => _gioiTinh; set => _gioiTinh = value; }
         public string SoCMND { get => _soCMND; set => _soCMND = value; }
         public string DiaChiThuongTru { get => _diaChiThuongTru; set => _diaChiThuongTru = value; }
         public string MaNghe { get => _maNghe; set => _maNghe = value; }

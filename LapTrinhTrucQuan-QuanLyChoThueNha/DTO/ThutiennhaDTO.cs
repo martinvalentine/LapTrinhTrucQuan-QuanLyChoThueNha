@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLChoThueNha.DTO
+namespace DTO
 {
-    //
-    internal class ThuTienNhaDTO
+    public class ThuTienNhaDTO
     {
         private string _maSoThu;
         private string _maSoThue;
@@ -53,4 +52,3 @@ namespace QLChoThueNha.DTO
         }
     }
 }
-
