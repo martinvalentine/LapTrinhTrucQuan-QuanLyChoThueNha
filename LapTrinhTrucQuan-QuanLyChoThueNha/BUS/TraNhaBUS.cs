@@ -31,9 +31,9 @@ namespace BUS
         {
             return traNhaDAO.InsertTraNha(maSoThue, ngayTra, tongTien);
         }
-        public bool UpdateTraNha(string maSoThue, DateTime ngayTra, decimal tongTien)
+        public bool UpdateTraNha(string maSoThue, DateTime ngayTra)
         {
-            return traNhaDAO.UpdateTraNha(maSoThue, ngayTra, tongTien);
+            return traNhaDAO.UpdateTraNha(maSoThue, ngayTra);
         }
         public bool DeleteTraNha(string maSoThue)
         {

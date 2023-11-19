@@ -16,36 +16,17 @@ namespace BUS
         {
             danhMucNhaDAO = new DanhMucNhaDAO();
         }
-        public List<DanhMucNhaDTO> GetListDanhMucNha(string maLoai = "")
+        public List<DanhMucNhaDTO> GetListDanhMucNha(string dauVao = "")
         {
             List<DanhMucNhaDTO> list = new List<DanhMucNhaDTO>();
-            DataTable data = danhMucNhaDAO.GetListDanhMucNha(maLoai);
+            DataTable data = danhMucNhaDAO.GetListDanhMucNha(dauVao);
             foreach (DataRow item in data.Rows)
             {
                 list.Add(new DanhMucNhaDTO(item));
             }
             return list;
         }
-        public List<DanhMucNhaDTO> GetListDanhMucNhaByDTSD(string maDTSD = "")
-        {
-            List<DanhMucNhaDTO> list = new List<DanhMucNhaDTO>();
-            DataTable data = danhMucNhaDAO.GetListDanhMucNhaByDTSD(maDTSD);
-            foreach (DataRow item in data.Rows)
-            {
-                list.Add(new DanhMucNhaDTO(item));
-            }
-            return list;
-        }
-        public List<DanhMucNhaDTO> GetListDanhMucNhaByDiaChi(string diaChi = "")
-        {
-            List<DanhMucNhaDTO> list = new List<DanhMucNhaDTO>();
-            DataTable data = danhMucNhaDAO.GetListDanhMucNhaByDiaChi(diaChi);
-            foreach (DataRow item in data.Rows)
-            {
-                list.Add(new DanhMucNhaDTO(item));
-            }
-            return list;
-        }
+
         public bool InsertDanhMucNha(string maNha, string tenChuNha, string dienThoai, string maLoai,
             string maDTSD, string diaChi, decimal? donGiaThue, string tinhTrang, int daThue, string ghiChu)
         {
