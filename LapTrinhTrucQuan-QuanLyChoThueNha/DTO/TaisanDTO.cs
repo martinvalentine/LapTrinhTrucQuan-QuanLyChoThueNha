@@ -9,22 +9,22 @@ namespace DTO
 {
     public class TaiSanDTO
     {
-        private string _maTaisan;
-        private string _tenTaisan;
+        private string _maTaiSan;
+        private string _tenTaiSan;
 
         public TaiSanDTO(string maTaisan, string tenTaisan)
         {
-            this._maTaisan = maTaisan;
-            this._tenTaisan = tenTaisan;
+            this._maTaiSan = maTaisan;
+            this._tenTaiSan = tenTaisan;
         }
 
-        public string MaTaisan { get => _maTaisan; set => _maTaisan = value; }
-        public string TenTaisan { get => _tenTaisan; set => _tenTaisan = value; }
+        public string MaTaiSan { get => _maTaiSan; set => _maTaiSan = value; }
+        public string TenTaiSan { get => _tenTaiSan; set => _tenTaiSan = value; }
 
         public TaiSanDTO(DataRow row)
         {
-            this.MaTaisan = row["Mataisan"].ToString();
-            this.TenTaisan = row["Tentaisan"].ToString();
+            this.MaTaiSan = row["Mataisan"].ToString();
+            this.TenTaiSan = row["Tentaisan"].ToString();
         }
     }
 }

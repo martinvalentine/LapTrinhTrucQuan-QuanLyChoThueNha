@@ -12,32 +12,32 @@ namespace DTO
         private string _maSoThue;
         private string _maKhach;
         private string _maNha;
-        private string _maMucdichSD;
+        private string _maMucDichSD;
         private DateTime _ngayBD;
         private DateTime _ngayKT;
         private decimal _tienDatCoc;
-        private string _maHinhthucTT;
+        private string _maHinhThucTT;
 
         public ThueNhaDTO(string maSoThue, string maKhach, string maNha, string maMucdichSD, DateTime ngayBD, DateTime ngayKT, decimal tienDatCoc, string maHinhthucTT)
         {
             this._maSoThue = maSoThue;
             this._maKhach = maKhach;
             this._maNha = maNha;
-            this._maMucdichSD = maMucdichSD;
+            this._maMucDichSD = maMucdichSD;
             this._ngayBD = ngayBD;
             this._ngayKT = ngayKT;
             this._tienDatCoc = tienDatCoc;
-            this._maHinhthucTT = maHinhthucTT;
+            this._maHinhThucTT = maHinhthucTT;
         }
 
         public string MaSoThue { get => _maSoThue; set => _maSoThue = value; }
         public string MaKhach { get => _maKhach; set => _maKhach = value; }
         public string MaNha { get => _maNha; set => _maNha = value; }
-        public string MaMucdichSD { get => _maMucdichSD; set => _maMucdichSD = value; }
+        public string MaMucdichSD { get => _maMucDichSD; set => _maMucDichSD = value; }
         public DateTime NgayBD { get => _ngayBD; set => _ngayBD = value; }
         public DateTime NgayKT { get => _ngayKT; set => _ngayKT = value; }
         public decimal TienDatCoc { get => _tienDatCoc; set => _tienDatCoc = value; }
-        public string MaHinhthucTT { get => _maHinhthucTT; set => _maHinhthucTT = value; }
+        public string MaHinhthucTT { get => _maHinhThucTT; set => _maHinhThucTT = value; }
 
         public ThueNhaDTO(DataRow row)
         {
