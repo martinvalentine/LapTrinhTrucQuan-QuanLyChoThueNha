@@ -4,11 +4,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//
 
-namespace QLChoThueNha.DTO
+namespace DTO
 {
-    internal class Nha_TaiSanDTO
+    public class Nha_TaiSanDTO
     {
         private string _maNha;
         private string _maTaisan;

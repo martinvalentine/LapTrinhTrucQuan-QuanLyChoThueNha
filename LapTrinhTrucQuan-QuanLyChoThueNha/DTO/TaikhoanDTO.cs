@@ -5,9 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLChoThueNha.DTO
+namespace DTO
 {
-    //
     public class TaiKhoanDTO
     {
         private string _userName;

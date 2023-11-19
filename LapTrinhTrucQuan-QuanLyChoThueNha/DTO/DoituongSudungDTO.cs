@@ -5,9 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLChoThueNha.DTO
+namespace DTO
 {
-    //
     public class DoiTuongSuDungDTO
     {
         private string _maDTSD;
@@ -29,4 +28,3 @@ namespace QLChoThueNha.DTO
         }
     }
 }
-

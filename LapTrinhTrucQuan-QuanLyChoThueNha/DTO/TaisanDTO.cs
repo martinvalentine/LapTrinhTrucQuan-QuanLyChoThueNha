@@ -5,11 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace QLChoThueNha.DTO
+namespace DTO
 {
-    //
-    internal class TaiSanDTO
+    public class TaiSanDTO
     {
         private string _maTaisan;
         private string _tenTaisan;

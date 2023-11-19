@@ -16,36 +16,17 @@ namespace BUS
         {
             khachThueDAO = new KhachThueDAO();
         }
-        public List<KhachThueDTO> GetListKhachThue(string tenKhach = "")
+        public List<KhachThueDTO> GetListKhachThue(string tenKhach = "", string diaChiThuongTru = "", string maNghe = "")
         {
             List<KhachThueDTO> list = new List<KhachThueDTO>();
-            DataTable data = khachThueDAO.GetListKhachThue(tenKhach);
+            DataTable data = khachThueDAO.GetListKhachThue(tenKhach, diaChiThuongTru, maNghe);
             foreach (DataRow item in data.Rows)
             {
                 list.Add(new KhachThueDTO(item));
             }
             return list;
         }
-        public List<KhachThueDTO> GetListKhachThueByDiaChi(string diaChiThuongTru = "")
-        {
-            List<KhachThueDTO> list = new List<KhachThueDTO>();
-            DataTable data = khachThueDAO.GetListKhachThueByDiaChi(diaChiThuongTru);
-            foreach (DataRow item in data.Rows)
-            {
-                list.Add(new KhachThueDTO(item));
-            }
-            return list;
-        }
-        public List<KhachThueDTO> GetListKhachThueByNghe(string maNghe = "")
-        {
-            List<KhachThueDTO> list = new List<KhachThueDTO>();
-            DataTable data = khachThueDAO.GetListKhachThueByNghe(maNghe);
-            foreach (DataRow item in data.Rows)
-            {
-                list.Add(new KhachThueDTO(item));
-            }
-            return list;
-        }
+
         public bool InsertKhachThue(string maKhach, string tenKhach, DateTime ngaySinh, int gioiTinh,
             string soCMND, string diaChiThuongTru, string maNghe, string maCQ)
         {

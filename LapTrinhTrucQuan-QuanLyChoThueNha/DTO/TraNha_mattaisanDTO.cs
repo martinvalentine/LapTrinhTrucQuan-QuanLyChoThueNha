@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace QLChoThueNha.DTO
+namespace DTO
 {
-    //
-    internal class TraNha_MatTaiSanDTO
+    public class TraNha_MatTaiSanDTO
     {
         private string _maSoThue;
         private string _maTaiSan;
@@ -43,5 +40,3 @@ namespace QLChoThueNha.DTO
         }
     }
 }
-
-

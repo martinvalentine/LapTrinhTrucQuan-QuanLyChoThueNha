@@ -18,13 +18,13 @@ namespace DAO
 
         public DataTable GetListLoaiNha()
         {
-            return Instance.ExecuteQuery($"");
+            return Instance.ExecuteQuery($"SELECT * FROM LoaiNha");
         }
         public bool InsertLoaiNha(string maLoai, string tenLoai)
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"INSERT LoaiNha (MaLoai,TenLoai)" + $"VALUES (N'{maLoai}', N'{tenLoai}')");
 
             }
             catch

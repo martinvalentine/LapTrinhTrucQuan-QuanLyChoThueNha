@@ -18,7 +18,7 @@ namespace DAO
 
         public DataTable GetListMucDichSuDung()
         {
-            return Instance.ExecuteQuery($"");
+            return Instance.ExecuteQuery($"SELECT * FROM MucDichSuDung");
         }
     }
 }

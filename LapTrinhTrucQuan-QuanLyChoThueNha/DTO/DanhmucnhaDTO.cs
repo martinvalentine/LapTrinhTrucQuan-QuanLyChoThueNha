@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace QLChoThueNha.DTO
+namespace DTO
 {
     public class DanhMucNhaDTO
     {
-        //
         private string _maNha;
         private string _tenChuNha;
         private string _dienThoai;
@@ -19,7 +17,7 @@ namespace QLChoThueNha.DTO
         private string _diaChi;
         private decimal? _donGiaThue;
         private string _tinhTrang;
-        private bool _daThue;
+        private int _daThue;
         private string _ghiChu;
 
         public string MaNha { get => _maNha; set => _maNha = value; }
@@ -30,11 +28,11 @@ namespace QLChoThueNha.DTO
         public string DiaChi { get => _diaChi; set => _diaChi = value; }
         public decimal? DonGiaThue { get => _donGiaThue; set => _donGiaThue = value; }
         public string TinhTrang { get => _tinhTrang; set => _tinhTrang = value; }
-        public bool DaThue { get => _daThue; set => _daThue = value; }
+        public int DaThue { get => _daThue; set => _daThue = value; }
         public string GhiChu { get => _ghiChu; set => _ghiChu = value; }
 
         public DanhMucNhaDTO(string maNha, string tenChuNha, string dienThoai, string maLoai,
-            string maDTSD, string diaChi, decimal? donGiaThue, string tinhTrang, bool daThue, string ghiChu)
+            string maDTSD, string diaChi, decimal? donGiaThue, string tinhTrang, int daThue, string ghiChu)
         {
             this._maNha = maNha;
             this._tenChuNha = tenChuNha;
@@ -58,7 +56,7 @@ namespace QLChoThueNha.DTO
             this.DiaChi = row["DiaChi"].ToString();
             this.DonGiaThue = decimal.Parse(row["DonGiaThue"].ToString());
             this.TinhTrang = row["TinhTrang"].ToString();
-            this.DaThue = bool.Parse(row["DaThue"].ToString());
+            this.DaThue = int.Parse(row["DaThue"].ToString());
             this.GhiChu = row["GhiChu"].ToString();
         }
     }

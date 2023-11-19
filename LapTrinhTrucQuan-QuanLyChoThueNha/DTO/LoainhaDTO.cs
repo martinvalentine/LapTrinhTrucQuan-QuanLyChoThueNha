@@ -5,16 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace QLChoThueNha.DTO
+namespace DTO
 {
-    //
-    public class LoainhaDTO
+    public class LoaiNhaDTO
     {
         private string _maLoai;
         private string _tenLoai;
 
-        public LoainhaDTO(string maLoai, string tenLoai)
+        public LoaiNhaDTO(string maLoai, string tenLoai)
         {
             this._maLoai = maLoai;
             this._tenLoai = tenLoai;
@@ -23,7 +21,7 @@ namespace QLChoThueNha.DTO
         public string MaLoai { get => _maLoai; set => _maLoai = value; }
         public string TenLoai { get => _tenLoai; set => _tenLoai = value; }
 
-        public LoainhaDTO(DataRow row)
+        public LoaiNhaDTO(DataRow row)
         {
             this.MaLoai = row["MaLoai"].ToString();
             this.TenLoai = row["TenLoai"].ToString();

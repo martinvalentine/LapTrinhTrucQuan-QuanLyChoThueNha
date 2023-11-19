@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace QLChoThueNha.DTO
+namespace DTO
 {
     public class CoQuanDTO
     {
-        //
         private string _maCQ;
         private string _tenCQ;
 

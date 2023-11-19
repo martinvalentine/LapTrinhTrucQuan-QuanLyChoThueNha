@@ -18,14 +18,14 @@ namespace DAO
 
         public DataTable GetListDoiTuongSuDung()
         {
-            return Instance.ExecuteQuery($"");
+            return Instance.ExecuteQuery($"SELECT * FROM DoiTuongSudung");
         }
 
         public bool InsertDoiTuongSuDung(string maDTSD, string tenDTSD)
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"INSERT DoiTuongSudung (MaDTSD,TenDTSD)" +  $"VALUES (N'{maDTSD}', N'{tenDTSD}')");
 
             }
             catch

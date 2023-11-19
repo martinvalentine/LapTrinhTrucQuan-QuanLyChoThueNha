@@ -19,7 +19,7 @@ namespace DAO
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"INSERT ThueNha (MaSoThue, MaKhach, MaNha, MaMucDichSD, NgayBD, NgayKT, TienDatCoc, MaHinhThucTT)" + $"VALUES (N'{maSoThue}', N'{maKhach}', N'{maNha}', N'{maMucdichSD}', N'{ngayBD}', N'{ngayKT}', {tienDatCoc}, N'{maHinhthucTT}')");
             }
             catch
             {
@@ -32,7 +32,7 @@ namespace DAO
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"UPDATE ThueNha SET MaKhach = N' {maKhach}', MaNha= N'{maNha}', MaMucDichSD=N'{maMucdichSD}', NgayBD = N'{ngayBD}', NgayKT = N'{ngayKT}', TienDatCoc='{tienDatCoc}', MaHinhThucTT= N'{maHinhthucTT}'");
             }
             catch
             {
@@ -45,7 +45,7 @@ namespace DAO
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"DELETE ThueNha WHERE MaSoThue = N'{maSoThue}'");
             }
             catch
             {

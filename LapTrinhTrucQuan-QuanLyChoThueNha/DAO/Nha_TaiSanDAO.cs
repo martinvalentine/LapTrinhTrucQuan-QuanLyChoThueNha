@@ -18,14 +18,14 @@ namespace DAO
 
         public DataTable GetListNha_TaiSan()
         {
-            return Instance.ExecuteQuery($"");
+            return Instance.ExecuteQuery($"SELECT * FROM Nha_TaiSan");
         }
 
-        public bool InsertNha_TaiSan(string maNha, string maTaisan, int soLuong, decimal? giaTri, string tinhTrang)
+        public bool InsertNha_TaiSan(string maNha, string maTaiSan, int soLuong, decimal? giaTri, string tinhTrang)
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"INSERT Nha_TaiSan (MaNha, MaTaiSan, SoLuong, GiaTri, TinhTrang)" + $"VALUES (N'{maNha}', N'{maTaiSan}', {soLuong}, {giaTri}, N'{tinhTrang}')");
 
             }
             catch
@@ -35,11 +35,11 @@ namespace DAO
             return true;
         }
 
-        public bool UpdateNha_TaiSan(string maNha, string maTaisan, int soLuong, decimal? giaTri, string tinhTrang)
+        public bool UpdateNha_TaiSan(string maNha, string maTaiSan, int soLuong, decimal? giaTri, string tinhTrang)
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"UPDATE Nha_TaiSan SET MaNha = N'{maNha}', MaTaiSan = N'{maTaiSan}', SoLuong = {soLuong}, GiaTri = {giaTri}, TinhTrang = N'{tinhTrang}' WHERE MaNha = N'{maNha}' AND MaTaiSan = N'{maTaiSan}'");
 
             }
             catch
@@ -53,7 +53,7 @@ namespace DAO
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"DELETE Nha_TaiSan WHERE MaNha = N'{maNha}' AND MaTaiSan = N'{maTaiSan}'");
 
             }
             catch

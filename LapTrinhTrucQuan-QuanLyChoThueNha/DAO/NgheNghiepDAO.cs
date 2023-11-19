@@ -18,14 +18,14 @@ namespace DAO
 
         public DataTable GetListNgheNghiep()
         {
-            return Instance.ExecuteQuery($"");
+            return Instance.ExecuteQuery($"SELECT * FROM NgheNghiep");
         }
 
         public bool InsertNgheNghiep(string maNghe, string tenNghe)
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"INSERT NgheNghiep (MaNghe,TenNghe)" + $"VALUES (N'{maNghe}', N'{tenNghe}')");
 
             }
             catch

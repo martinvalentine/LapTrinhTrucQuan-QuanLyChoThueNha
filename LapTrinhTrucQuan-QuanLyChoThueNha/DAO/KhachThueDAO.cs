@@ -18,22 +18,22 @@ namespace DAO
         }
 
         // Lấy thông tin khách thuê theo tên 
-        public DataTable GetListKhachThue(string tenKhach = "")
+        public DataTable GetListKhachThue(string tenKhach = "",string diaChiThuongTru ="",string maNghe = "")
         {
-            return Instance.ExecuteQuery($"");
+            return Instance.ExecuteQuery($"SELECT * FROM KhachThue WHERE TenKhach LIKE N'%{tenKhach}%' AND DiaChiThuongTru LIKE N'%{diaChiThuongTru}%' AND MaNghe LIKE N'%{maNghe}%'");
         }
 
         // Lấy thông tin khách thuê theo địa chỉ thường trú
-        public DataTable GetListKhachThueByDiaChi(string diaChiThuongTru = "")
-        {
-            return Instance.ExecuteQuery($"");
-        }
+        //public DataTable GetListKhachThueByDiaChi(string diaChiThuongTru = "")
+        //{
+        //    return Instance.ExecuteQuery($"SELECT * FROM KhachThue WHERE TenKhach = N'{diaChiThuongTru}'");
+        //}
 
-        // Lấy thông tin khách thuê theo nghề
-        public DataTable GetListKhachThueByNghe(string maNghe = "")
-        {
-            return Instance.ExecuteQuery($"");
-        }
+        //// Lấy thông tin khách thuê theo nghề
+        //public DataTable GetListKhachThueByNghe(string maNghe = "")
+        //{
+        //    return Instance.ExecuteQuery($"SELECT * FROM KhachThue WHERE TenKhach = N'{maNghe}'");
+        //}
 
         // Nhập thông tin khách thuê
         public bool InsertKhachThue(string maKhach, string tenKhach, DateTime ngaySinh, int gioiTinh,
@@ -41,7 +41,7 @@ namespace DAO
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"INSERT KhachThue (MaKhach, TenKhach, NgaySinh, GioiTinh, SoCMND, DiaChiThuongTru, MaNghe, MaCQ)" + $"VALUES (N'{maKhach}', N'{tenKhach}', N'{ngaySinh}', {gioiTinh}, N'{soCMND}', N'{diaChiThuongTru}', N'{maNghe}', N'{maCQ}')");
             }
             catch
             {
@@ -56,7 +56,7 @@ namespace DAO
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"UPDATE KhachThue SET MaKhach = N'{maKhach}', TenKhach = '{tenKhach}', N'{ngaySinh}', GioiTinh = {gioiTinh}, SoCMND = N'{soCMND}', DiaChiThuongTru = N'{diaChiThuongTru}', MaNghe = N'{maNghe}', MaCQ = N'{maCQ}' WHERE MaKhach = N'{maKhach}'");
             }
             catch
             {
@@ -70,7 +70,7 @@ namespace DAO
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"DELETE KhachThue WHERE MaKhach = N'{maKhach}'");
             }
             catch
             {
