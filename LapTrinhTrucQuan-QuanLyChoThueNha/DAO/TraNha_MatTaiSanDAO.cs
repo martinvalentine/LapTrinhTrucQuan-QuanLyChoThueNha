@@ -18,14 +18,14 @@ namespace DAO
 
         public DataTable GetListTraNha_MatTaiSan()
         {
-            return Instance.ExecuteQuery($"");
+            return Instance.ExecuteQuery($"SELECT * FROM TraNha_MatTaiSan");
         }
 
         public bool InsertTraNha_MatTaiSan(string maSoThue, string maTaiSan, int soLuong, decimal giaTri, decimal thanhTien)
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"INSERT TraNha_MatTaiSan (MaSoThue, MaTaiSan, SoLuong, GiaTri)" + $"VALUES (N'{maSoThue}', N'{maTaiSan}', {soLuong}, {giaTri})");
             }
             catch
             {
@@ -38,7 +38,7 @@ namespace DAO
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"UPDATE TraNha_MatTaiSan SET SoLuong = {soLuong}, GiaTri = {giaTri} where MaSoThue = N'{maSoThue}' and MaTaiSan = N'{maTaiSan}'");
             }
             catch
             {
@@ -51,7 +51,7 @@ namespace DAO
         {
             try
             {
-                Instance.ExecuteNonQuery($"");
+                Instance.ExecuteNonQuery($"DELETE TraNha_MatTaiSan WHERE MaSoThue = N'{maSoThue}' and MaTaiSan = N'{maTaiSan}'");
             }
             catch
             {

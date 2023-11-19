@@ -18,7 +18,7 @@ namespace DAO
 
         public DataTable GetListTaiSan()
         {
-            return Instance.ExecuteQuery($"");
+            return Instance.ExecuteQuery($"SELECT * FROM TaiSan");
         }
     }
 }

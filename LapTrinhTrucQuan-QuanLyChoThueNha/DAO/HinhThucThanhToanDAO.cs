@@ -18,7 +18,7 @@ namespace DAO
 
         public DataTable GetListHinhThucThanhToan()
         {
-            return Instance.ExecuteQuery($"");
+            return Instance.ExecuteQuery($"SELECT * FROM HinhThucThanhToan");
         }
     }
 }

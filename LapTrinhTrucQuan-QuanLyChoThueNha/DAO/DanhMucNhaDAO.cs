@@ -16,20 +16,20 @@ namespace DAO
             Instance = new DataProvider();
         }
 
-        public DataTable GetListDanhMucNha(string maLoai = "")
+        public DataTable GetListDanhMucNha(string dauVao = "")
         {
-            return Instance.ExecuteQuery($"SELECT * FROM DanhMucNha WHERE MaHD = N'{maLoai}'"); // Day la cau truy van khi co dau vao
+            return Instance.ExecuteQuery($"SELECT * FROM DanhMucNha WHERE MaLoai = N'{dauVao}' OR MaDTSD = N'{dauVao}' OR DiaChi = N'{dauVao}'"); // Day la cau truy van khi co dau vao
         }
 
-        public DataTable GetListDanhMucNhaByDTSD(string maDTSD = "")
-        {
-            return Instance.ExecuteQuery($"SELECT * FROM DanhMucNha WHERE MaHD = N'{maDTSD}'"); // Day la cau truy van khi co dau vao
-        }
+        //public DataTable GetListDanhMucNhaByDTSD(string maDTSD = "")
+        //{
+        //    return Instance.ExecuteQuery($"SELECT * FROM DanhMucNha WHERE maDTSD = N'{maDTSD}'"); // Day la cau truy van khi co dau vao
+        //}
 
-        public DataTable GetListDanhMucNhaByDiaChi(string diaChi = "")
-        {
-            return Instance.ExecuteQuery($"SELECT * FROM DanhMucNha WHERE MaHD = N'{diaChi}'"); // Day la cau truy van khi co dau vao
-        }
+        //public DataTable GetListDanhMucNhaByDiaChi(string diaChi = "")
+        //{
+        //    return Instance.ExecuteQuery($"SELECT * FROM DanhMucNha WHERE diaChi = N'{diaChi}'"); // Day la cau truy van khi co dau vao
+        //}
 
         public bool InsertDanhMucNha(string maNha, string tenChuNha, string dienThoai, string maLoai, string maDTSD, string diaChi, decimal? donGiaThue, string tinhTrang, int daThue, string ghiChu)
         {
