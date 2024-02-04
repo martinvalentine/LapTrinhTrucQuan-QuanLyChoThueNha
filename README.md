@@ -1,7 +1,3 @@
-## Lưu ý
-
-Không được push trực tiếp lên branch "main"
-Ai làm nhiệm vụ gì thì tạo 1 branch với tên của nhiệm vụ đấy, vd: DTOandSQL
 ## Quy tắc đặt tên biến:
 ```
 private: _thisIsAnExample
